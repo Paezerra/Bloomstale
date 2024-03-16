@@ -1,0 +1,132 @@
+.menu {
+  display: grid;
+  grid-template-columns: 60px 180px auto 60px 80px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #6c8746;
+}
+
+.menu div {
+  border-right: 1px solid #6c8746;
+}
+
+.menu h2 {
+  margin: auto 0;
+  font-family: Cinzel;
+  font-weight: 300;
+  text-align: left;
+  padding-left: 20px;
+  color: #6c8746;
+}
+
+.menu li {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: inherit;
+  align-items: center;
+}
+
+.menu a {
+  font-family: Cinzel;
+  font-size: 14px;
+  font-weight: 100;
+  color: #6c8746;
+}
+
+.menu a:hover,
+.menu .focused {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.menu li:nth-child(3) {
+  gap: auto;
+  justify-content: space-around;
+  padding: 0px 25px;
+}
+
+.menu li:nth-child(4) {
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.menu img {
+  width: 50px;
+}
+
+.menu_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  gap: 10px;
+}
+
+.menu_button span {
+  color: #6c8746;
+}
+
+.menu_button img {
+  height: 30px;
+  width: 30px;
+}
+
+.menu_button img:hover {
+  fill: #ff0000; /* Change to the color you desire */
+}
+
+.divider {
+  border-bottom: 1px solid black;
+  height: 1px;
+  width: 100%;
+}
+
+#logout {
+  margin-top: 150px;
+}
+
+#logout span {
+  color: #b3422d;
+}
+
+#expand_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  min-width: 40px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  gap: 10px;
+  align-self: self-start;
+}
+
+#expand_button img {
+  height: 40px;
+  width: 40px;
+}
+
+#collapse_button {
+  background-color: #004071;
+  font-weight: 400;
+  color: white;
+  width: 100%;
+}
