@@ -1,0 +1,84 @@
+.hero {
+  margin-top: var(--headerHeight);
+  display: grid;
+  grid-template-columns: var(--marginBorders) auto var(--marginBorders);
+  box-sizing: border-box;
+  height: 2000px;
+  width: 100vw;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid var(--primaryColor);
+}
+
+.dividerLeft {
+  box-sizing: border-box;
+  width: var(--marginBorders);
+  height: calc(100vh - var(--headerHeight));
+  min-height: 600px;
+  border-right: var(--borderLenght) solid var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.invertedText {
+  padding-top: 25px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  font-family: var(--paragraphFontFamily);
+  font-weight: 100;
+  font-size: 20px;
+  color: var(--primaryColor);
+  opacity: 0.5;
+}
+
+.heroContent {
+  margin: 0px;
+  display: flex;
+}
+
+.heroContent ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  width: calc(50vw - 2 * var(--marginBorders));
+  padding: 0;
+  margin: 0px 30px 0px 60px;
+}
+
+.heroContent h1 {
+  font-size: var(--titleFontH1Size);
+  font-weight: 100;
+  text-align: left;
+  margin: 0;
+  margin-top: 60px;
+}
+
+.heroContent h2 {
+  text-align: left;
+  font-weight: 200;
+}
+
+.heroContent img {
+  width: calc(50vw - 2 * var(--marginBorders));
+  height: max-content;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 25px;
+}
+
+.buttonContainer button {
+  font-size: var(--buttonFontLinkSize);
+  font-weight: 300;
+  padding: 10px 20px;
+  border: 1px solid var(--primaryColor);
+}
+
+.buttonContainer button:nth-child(1) {
+  background-color: var(--primaryColor);
+  color: white;
+}

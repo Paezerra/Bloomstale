@@ -1,18 +1,19 @@
 .menu {
   display: grid;
-  grid-template-columns: 60px 180px auto 60px 80px;
+  grid-template-columns: var(--marginBorders) 180px auto 60px var(--marginBorders);
   box-sizing: border-box;
-  height: 60px;
+  height: var(--headerHeight);
   width: 100vw;
   margin: 0;
   padding: 0;
-  position: fixed;
+  position: absolute;
   top: 0;
-  border-bottom: 1px solid #6c8746;
+  border-bottom: var(--borderLenght) solid var(--primaryColor);
+  z-index: 10;
 }
 
 .menu div {
-  border-right: 1px solid #6c8746;
+  border-right: var(--borderLenght) solid var(--primaryColor);
 }
 
 .menu h2 {
@@ -21,7 +22,7 @@
   font-weight: 300;
   text-align: left;
   padding-left: 20px;
-  color: #6c8746;
+  color: var(--primaryColor);
 }
 
 .menu li {
@@ -33,10 +34,10 @@
 }
 
 .menu a {
-  font-family: Cinzel;
-  font-size: 14px;
+  font-family: var(--titleFontFamily);
+  font-size: var(--titleFontLinkSize);
   font-weight: 100;
-  color: #6c8746;
+  color: var(--primaryColor);
 }
 
 .menu a:hover,
@@ -56,8 +57,9 @@
 }
 
 .menu li:nth-child(4) {
-  gap: 20px;
+  gap: 10px;
   justify-content: flex-end;
+  padding-right: 25px;
 }
 
 .menu img {
@@ -78,7 +80,7 @@
 }
 
 .menu_button span {
-  color: #6c8746;
+  color: var(--primaryColor);
 }
 
 .menu_button img {
@@ -86,47 +88,8 @@
   width: 30px;
 }
 
-.menu_button img:hover {
-  fill: #ff0000; /* Change to the color you desire */
-}
-
 .divider {
-  border-bottom: 1px solid black;
-  height: 1px;
-  width: 100%;
-}
-
-#logout {
-  margin-top: 150px;
-}
-
-#logout span {
-  color: #b3422d;
-}
-
-#expand_button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  min-width: 40px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: 0;
-  gap: 10px;
-  align-self: self-start;
-}
-
-#expand_button img {
-  height: 40px;
-  width: 40px;
-}
-
-#collapse_button {
-  background-color: #004071;
-  font-weight: 400;
-  color: white;
+  border-bottom: var(--borderLenght) solid var(--primaryColor);
+  height: var(--borderLenght);
   width: 100%;
 }

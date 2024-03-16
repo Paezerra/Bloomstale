@@ -1,8 +1,24 @@
+
 #root {
+  --primaryColor: #6C8746;
+  --secondaryColor: #F6F5F4;
+  --fadedPrimaryColor: #6C8746;
+  --marginBorders: 60px;
+  --borderLenght: 1px;
+  --titleFontFamily: Cinzel;
+  --titleFontH1Size: 80px;
+  --titleFontLinkSize: 14px;
+  --buttonFontLinkSize: 20px;
+  --paragraphFontFamily: Sulphur Point;
+  --headerHeight: 60px;
   max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
+  overflow: auto;
+  box-sizing: border-box;
+  font-family: Sulphur Point;
+  color: #6C8746;
 }
 
 body {
