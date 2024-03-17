@@ -8,10 +8,11 @@
   width: 100vw;
   margin: 0;
   padding: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   border-bottom: var(--borderLenght) solid var(--primaryColor);
   z-index: 10;
+  background-color: var(--secondaryColor);
 }
 
 .menu div {
