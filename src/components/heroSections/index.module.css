@@ -3,23 +3,25 @@
   display: grid;
   grid-template-columns: var(--marginBorders) auto var(--marginBorders);
   box-sizing: border-box;
-  height: 2000px;
   width: 100vw;
   padding: 0;
   position: fixed;
   top: 0;
-  border-bottom: 1px solid var(--primaryColor);
 }
 
 .dividerLeft {
   box-sizing: border-box;
   width: var(--marginBorders);
-  height: calc(100vh - var(--headerHeight));
-  min-height: 600px;
-  border-right: var(--borderLenght) solid var(--primaryColor);
+  max-width: var(--marginBorders);
+  padding: 0;
+  margin: 0;
+  height: calc(70vh - var(--headerHeight));
+  min-height: 610px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  border-right: var(--borderLenght) solid var(--primaryColor);
+  margin-bottom: 60px;
 }
 
 .invertedText {
@@ -34,18 +36,23 @@
 }
 
 .heroContent {
+  width: 100%;
+  max-width: 1480px;
   margin: 0px;
   display: flex;
+  justify-self: center;
+  max-height: 550px;
 }
 
 .heroContent ul {
   display: flex;
   flex-direction: column;
-  justify-content: left;
+  justify-content: center;
   align-items: flex-start;
   width: calc(50vw - 2 * var(--marginBorders));
   padding: 0;
   margin: 0px 30px 0px 60px;
+  gap: 40px;
 }
 
 .heroContent h1 {
@@ -59,10 +66,12 @@
 .heroContent h2 {
   text-align: left;
   font-weight: 200;
+  margin: 0;
 }
 
 .heroContent img {
-  width: calc(50vw - 2 * var(--marginBorders));
+  padding-top: 60px;
+  max-width: calc(45vw - 2 * var(--marginBorders));
   height: max-content;
 }
 
@@ -71,14 +80,12 @@
   gap: 25px;
 }
 
-.buttonContainer button {
-  font-size: var(--buttonFontLinkSize);
-  font-weight: 300;
-  padding: 10px 20px;
-  border: 1px solid var(--primaryColor);
-}
+@media (max-width: 1280px) {
+  .heroContent h1 {
+    font-size: 70px;
+  }
 
-.buttonContainer button:nth-child(1) {
-  background-color: var(--primaryColor);
-  color: white;
+  .heroContent ul {
+    gap: 30px;
+  }
 }
