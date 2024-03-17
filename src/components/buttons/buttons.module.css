@@ -55,7 +55,7 @@ button {
 
 @media (max-width: 750px) {
   .emptySquareButton {
-    border-top:  var(--borderLenght) solid var(--primaryColor);
+    border-top: var(--borderLenght) solid var(--primaryColor);
     height: 60px;
     width: 100%;
   }
