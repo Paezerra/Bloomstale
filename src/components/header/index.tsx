@@ -23,17 +23,17 @@ const Menu: React.FC<Props> = ({languageStatus, selectLanguage}) => {
             {/* <img src='' alt="Biotecs Logo" /> */}
             <div></div>
             <h2>Bloomstale</h2>
-            <li>
+            <ul>
                 <MenuItem label='Inicio' isFocused={focusedSection === 'Inicio'} onPress={() => selectSection('Inicio')}></MenuItem>
                 <MenuItem label='Servicios' isFocused={focusedSection === 'Servicios'}  onPress={() => selectSection('Servicios')}></MenuItem>
                 <MenuItem label='Colecciones' isFocused={focusedSection === 'Colecciones'} onPress={() => selectSection('Colecciones')}></MenuItem>
                 <MenuItem label='Nosotros' isFocused={focusedSection === 'Nosotros'}  onPress={() => selectSection('Nosotros')}></MenuItem>
                 <MenuItem label='(316) - 464 9105' isFocused={focusedSection === '(316) - 464 9105'}  onPress={() => selectSection('(316) - 464 9105')}></MenuItem>
-            </li>
-            <li>
+            </ul>
+            <ul>
                 <MenuItem label='ES' isFocused={languageStatus === 'ES'} onPress={() => selectLanguage('ES')}></MenuItem>
                 <MenuItem label='EN' isFocused={languageStatus === 'EN'}  onPress={() => selectLanguage('EN')}></MenuItem>
-            </li>
+            </ul>
 
         </div>
     );

@@ -1,6 +1,8 @@
 .menu {
   display: grid;
-  grid-template-columns: var(--marginBorders) 180px auto 60px var(--marginBorders);
+  grid-template-columns: var(--marginBorders) 180px auto 180px var(
+      --marginBorders
+    );
   box-sizing: border-box;
   height: var(--headerHeight);
   width: 100vw;
@@ -25,12 +27,15 @@
   color: var(--primaryColor);
 }
 
-.menu li {
+.menu ul {
   display: flex;
   flex-direction: row;
   gap: 20px;
   height: inherit;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  max-width: var(--maxWidth);
 }
 
 .menu a {
@@ -39,7 +44,6 @@
   font-weight: 100;
   color: var(--primaryColor);
   transition: font-weight 0.2s ease; /* Smooth transition for font-weight */
-
 }
 
 .menu a:hover,
@@ -52,13 +56,15 @@
   text-decoration: underline;
 }
 
-.menu li:nth-child(3) {
-  gap: auto;
-  justify-content: space-around;
+.menu ul:nth-child(3) {
+  width: 100%;
+  justify-content: space-between;
+  justify-self: center;
   padding: 0px 25px;
+  max-width: var(--maxWidth);
 }
 
-.menu li:nth-child(4) {
+.menu ul:nth-child(4) {
   gap: 10px;
   justify-content: flex-end;
   padding-right: 25px;
@@ -94,4 +100,56 @@
   border-bottom: var(--borderLenght) solid var(--primaryColor);
   height: var(--borderLenght);
   width: 100%;
+}
+
+@media (max-width: 2000px) {
+  .menu {
+    grid-template-columns: var(--marginBorders) 180px auto 60px var(
+        --marginBorders
+      );
+  }
+  .menu ul:nth-child(3) {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1280px) {
+
+
+  .heroContent h1 {
+    font-size: 60px;
+  }
+  .heroContent h2 {
+    font-size: 20px;
+  }
+  .heroContent ul {
+    gap: 30px;
+  }
+  .heroContent ul {
+    width: 40%;
+  }
+  .heroContent img {
+    width: 50%;
+    max-width: calc(65vw - 2 * var(--marginBorders));
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .menu ul:nth-child(4) {
+    padding-right: 0;
+  }
+  
+  .menu ul:nth-child(3) {
+    justify-content: center;
+  }
+  .heroContent h1 {
+    font-size: 48px;
+  }
+  .heroContent h2 {
+    font-size: 18px;
+  }
+  .buttonContainer {
+    flex-direction: column;
+  }
 }

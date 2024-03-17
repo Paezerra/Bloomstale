@@ -1,6 +1,6 @@
 button {
   font-family: Sulphur Point;
-  font-size: var(--buttonFontLinkSize);
+  font-size: var(--buttonFontLinkSizeBig);
   font-weight: 300;
   padding: 10px 20px;
   border: 1px solid var(--primaryColor);
@@ -14,7 +14,6 @@ button {
   background-color: var(--primaryColor);
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
-
 }
 
 .greenButton:hover {
@@ -26,10 +25,15 @@ button {
   background-color: transparent;
   color: var(--primaryColor);
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
-
 }
 
 .emptyButton:hover {
   background-color: var(--primaryColor);
   color: white;
+}
+
+@media (max-width: 1280px) {
+  button {
+    font-size: var(--buttonFontLinkSizeSmall);
+  }
 }

@@ -8,9 +8,11 @@
   --titleFontFamily: Cinzel;
   --titleFontH1Size: 80px;
   --titleFontLinkSize: 14px;
-  --buttonFontLinkSize: 20px;
+  --buttonFontLinkSizeBig: 20px;
+  --buttonFontLinkSizeSmall: 16px;
   --paragraphFontFamily: Sulphur Point;
   --headerHeight: 60px;
+  --maxWidth:1480px;
   max-width: 1280px;
   margin: 0;
   padding: 0;
