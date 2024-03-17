@@ -35,6 +35,7 @@ const Hero: React.FC<Props> = ({ type, title, primaryText, secondaryText, thirdT
                 <div className={styles.heroContent}>
                     <ul>
                         <h1>{primaryText}</h1>
+                        <img className={styles.mobileImage} src={image} alt={imageAlt} />
                         <h2>{secondaryText}</h2>
                         <div className={styles.buttonContainer}>
                             <ButtonsComponent label={cta1} type={ButtonNames.GreenFilledButton} link={cta1Link}></ButtonsComponent>
