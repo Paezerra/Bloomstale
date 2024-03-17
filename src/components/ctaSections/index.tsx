@@ -16,23 +16,23 @@ const CtaSection: React.FC<Props> = ({ type, primaryText, secondaryText, thirdTe
     if (type === 'triple_button') {
         button_section =
             <section className={styles.button_section}>
-                <div>
-                </div>
+                <div className={styles.underLineDiv} />
                 <div className={styles.button_container}>
                     <ul>
-                        <ButtonsComponent label={primaryText} type={ButtonNames.GreenFilledButton} link=''></ButtonsComponent>
-                        <ButtonsComponent label={secondaryText} type={ButtonNames.GreenEmptyButton}></ButtonsComponent>
-                        <ButtonsComponent label={thirdText} type={ButtonNames.GreenEmptyButton}></ButtonsComponent>
+                        <ButtonsComponent label={primaryText} type={ButtonNames.GreenEmptySquareButton} link=''></ButtonsComponent>
+                        <ButtonsComponent label={secondaryText} type={ButtonNames.GreenEmptySquareButton}></ButtonsComponent>
+                        <ButtonsComponent label={thirdText} type={ButtonNames.GreenEmptySquareButton}></ButtonsComponent>
                     </ul>
                 </div>
+                <div className={styles.upperLineDiv} />
             </section>
     }
 
 
     return (
-        <div>
+        <>
             {button_section}
-        </div>
+        </>
     );
 };
 

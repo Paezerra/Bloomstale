@@ -1,3 +1,40 @@
 .button_section {
+  display: grid;
+  grid-template-columns: var(--marginBorders) auto var(--marginBorders);
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 0;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.underLineDiv {
+    box-sizing: border-box;
+    height: var(--marginBorders);
+    border-bottom: var(--borderLenght) solid var(--primaryColor);
+}
+
+.upperLineDiv {
+    box-sizing: border-box;
+    height: var(--marginBorders);
+    border-top: var(--borderLenght) solid var(--primaryColor);
+}
+
+.button_container {
+    box-sizing: border-box;
     display: flex;
+    flex-direction: row;
+    height: var(--marginBorders) ;
+    margin: 0;
+    padding: 0;
+    border: var(--borderLenght) solid var(--primaryColor);
+    border-left: 0;
+}
+
+.button_container ul {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    margin: 0;
 }

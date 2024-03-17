@@ -32,6 +32,22 @@ button {
   color: white;
 }
 
+.emptySquareButton {
+  background-color: transparent;
+  box-sizing: border-box;
+  height: 58px;
+  border-radius: 0px;
+  border: 0;
+  border-left: var(--borderLenght) solid var(--primaryColor);
+  flex-grow: 1;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
+}
+
+.emptySquareButton:hover {
+  background-color: var(--primaryColor);
+  color: white;
+}
+
 @media (max-width: 1280px) {
   button {
     font-size: var(--buttonFontLinkSizeSmall);

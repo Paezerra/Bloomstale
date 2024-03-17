@@ -3,7 +3,8 @@ import styles from './buttons.module.css';
 
 export enum ButtonNames {
     GreenFilledButton = 'green_filled',
-    GreenEmptyButton = 'green_empty'
+    GreenEmptyButton = 'green_empty',
+    GreenEmptySquareButton = 'green_empty_aquare'
 }
 
 type Props = {
@@ -19,14 +20,17 @@ const ButtonsComponent: React.FC<Props> = ({ type, label, icon, icon_description
     let buttonItem;
 
     if (type === 'green_filled') {
-        console.log('entre 1')
         buttonItem = <button className={styles.greenButton}>
             {icon && <img src={icon} alt={icon_description} />}
             {label}
         </button>;
     } else if (type === 'green_empty') {
-        console.log('entre 2')
         buttonItem = <button className={styles.emptyButton}>
+            {icon && <img src={icon} alt={icon_description} />}
+            {label}
+        </button>;
+    } else if (type === 'green_empty_aquare') {
+        buttonItem = <button className={styles.emptySquareButton}>
             {icon && <img src={icon} alt={icon_description} />}
             {label}
         </button>;

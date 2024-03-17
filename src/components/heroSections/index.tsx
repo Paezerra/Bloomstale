@@ -35,6 +35,7 @@ const Hero: React.FC<Props> = ({ type, title, primaryText, secondaryText, thirdT
                     </ul>
                     <img src={image} alt="Imagen de una flor disecada con petalos morados y blancos" />
                 </div>
+                <div className={styles.dividerleftrow}></div>
             </section>
     }
 

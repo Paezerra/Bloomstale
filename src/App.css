@@ -14,6 +14,7 @@
   --headerHeight: 60px;
   --maxWidth:1480px;
   position: absolute;
+  background-color: var(--secondaryColor);
   height: auto;
   width: 100vw;
   top: 0;

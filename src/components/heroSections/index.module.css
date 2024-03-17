@@ -2,6 +2,7 @@
   margin-top: var(--headerHeight);
   display: grid;
   grid-template-columns: var(--marginBorders) auto var(--marginBorders);
+  grid-template-rows: 1fr 60px;
   box-sizing: border-box;
   width: 100vw;
   padding: 0;
@@ -21,11 +22,14 @@
   justify-content: center;
   align-items: flex-start;
   border-right: var(--borderLenght) solid var(--primaryColor);
-  margin-bottom: 60px;
+}
+
+.dividerleftrow {
+  height: 60px;
 }
 
 .invertedText {
-  padding-top: 25px;
+  padding-top: 20px;
   writing-mode: vertical-rl;
   text-transform: uppercase;
   font-family: var(--paragraphFontFamily);
@@ -33,6 +37,7 @@
   font-size: 20px;
   color: var(--primaryColor);
   opacity: 0.5;
+
 }
 
 .heroContent {
