@@ -38,6 +38,8 @@
   font-size: var(--titleFontLinkSize);
   font-weight: 100;
   color: var(--primaryColor);
+  transition: font-weight 0.2s ease; /* Smooth transition for font-weight */
+
 }
 
 .menu a:hover,

@@ -1,5 +1,7 @@
 import styles from './index.module.css'
 import bannerImage from '../../../public/bannerWebPage.png'
+import ButtonsComponent from '../buttons/button';
+import {ButtonNames} from '../buttons/button';
 
 type Props = {
     type?: string;
@@ -23,13 +25,12 @@ const Hero: React.FC<Props> = ({ type, title, image }) => {
                         <h1>Contamos historias con Flores</h1>
                         <h2>Somos un estudio de arte centrado en la creación de cuadros Oshibana o Arte de flores prensadas</h2>
                         <div className={styles.buttonContainer}>
-                            <button>Conoce nuestra Historia</button>
-                            <button>Ir al Catálogo</button>
+                            <ButtonsComponent label='Conoce nuestra Historia' type={ButtonNames.GreenFilledButton} link=''></ButtonsComponent>
+                            <ButtonsComponent label='Ir al Catálogo' type={ButtonNames.GreenEmptyButton}></ButtonsComponent>
                         </div>
                     </ul>
                     <img src={bannerImage} alt="Imagen de una flor disecada con petalos morados y blancos" />
                 </div>
-                <h1>Hola</h1>
             </section>
     }
 
