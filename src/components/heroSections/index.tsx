@@ -5,6 +5,7 @@ import { ButtonNames } from '../buttons/button';
 export enum HeroNames {
     HeroMain_1 = 'HeroSectionMain_1',
     HeroImage_1 = 'HeroSectionImage_1',
+    HeroMain_2 = 'HeroSectionMain_2',
 }
 
 type Props = {
@@ -56,6 +57,27 @@ const Hero: React.FC<Props> = ({ type, title, primaryText, secondaryText, thirdT
                     <div className={styles.textContainerImage}>
                         <h3>{primaryText}</h3>
                         <h3>{secondaryText}</h3>
+                    </div>
+                </div>
+                <div className={styles.dividerleftrow}></div>
+            </section>
+    } else if (type === HeroNames.HeroMain_2) {
+        hero_section =
+            <section className={styles.hero2}>
+                {title && <title>{title}</title>}
+                <div className={styles.dividerMain2}></div>
+                <div className={styles.heroContentMain2}>
+                    <h2>{primaryText}</h2>
+                    {/* <img className={styles.mobileImage} src={image} alt={imageAlt} /> */}
+                    <div className={styles.heroContent_Within}>
+                        <div className={styles.imageContainer}>
+                            <img src={image} alt={imageAlt} />
+                        </div>
+                        <div className={styles.textContainerMain2}>
+                            <h3>{secondaryText}</h3>
+                            <h4>{thirdText}</h4>
+                            <ButtonsComponent label={cta1} type={ButtonNames.WhiteEmptyButton} link={cta2Link}></ButtonsComponent>
+                        </div>
                     </div>
                 </div>
                 <div className={styles.dividerleftrow}></div>

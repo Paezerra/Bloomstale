@@ -20,15 +20,24 @@ button {
   color: var(--primaryColor) !important;
 }
 
-.emptyButton {
+.emptyButton  {
   background-color: transparent;
   color: var(--primaryColor);
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
 }
 
-.emptyButton:hover {
+.emptyWhiteButton {
+  border: 1px solid white ;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background-color and color */
+
+}
+
+.emptyWhiteButton:hover, .emptyButton:hover {
   background-color: var(--primaryColor);
   color: white;
+  border: 1px solid var(--primaryColor) ;
 }
 
 .emptySquareButton {

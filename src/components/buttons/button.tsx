@@ -4,7 +4,8 @@ import styles from './buttons.module.css';
 export enum ButtonNames {
     GreenFilledButton = 'green_filled',
     GreenEmptyButton = 'green_empty',
-    GreenEmptySquareButton = 'green_empty_aquare'
+    WhiteEmptyButton = 'white_empty',
+    GreenEmptySquareButton = 'green_empty_square'
 }
 
 type Props = {
@@ -29,13 +30,17 @@ const ButtonsComponent: React.FC<Props> = ({ type, label, icon, icon_description
             {icon && <img src={icon} alt={icon_description} />}
             {label}
         </button>;
-    } else if (type === 'green_empty_aquare') {
+    } else if (type === 'green_empty_square') {
         buttonItem = <button className={styles.emptySquareButton}>
             {icon && <img src={icon} alt={icon_description} />}
             {label}
         </button>;
+    } else if (type === 'white_empty') {
+        buttonItem = <button className={styles.emptyWhiteButton}>
+            {icon && <img src={icon} alt={icon_description} />}
+            {label}
+        </button>;
     }
-
     return (
         <>
             {link ? (

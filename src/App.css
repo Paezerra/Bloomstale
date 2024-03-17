@@ -2,7 +2,7 @@
 #root {
   --primaryColor: #6C8746;
   --secondaryColor: #F6F5F4;
-  --fadedPrimaryColor: #6C8746;
+  --fadedPrimaryColor: rgba(108, 135, 70, 0.5);
   --marginBorders: 60px;
   --borderLenght: 1px;
   --titleFontFamily: Cinzel;
@@ -13,6 +13,16 @@
   --paragraphFontFamily: Sulphur Point;
   --headerHeight: 60px;
   --maxWidth:1480px;
+  --fontTitleSizeXl: 80px;
+  --fontTitleSizeL: 60px;
+  --fontTitleSizeXM: 48px;
+  --fontTitleSizeM: 36px;
+  --fontTitleSizeS: 24px;
+  --fontTitleSizeXS: 18px;
+  --fontParagraphSizeL: 20px;
+  --fontParagraphSizeM: 18px;
+  --fontParagraphSizeS: 16px;
+  --fontParagraphSizeXS: 14px;
   position: absolute;
   background-color: var(--secondaryColor);
   height: auto;
