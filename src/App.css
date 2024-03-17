@@ -21,11 +21,12 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  overflow: auto;
   box-sizing: border-box;
   font-family: Sulphur Point;
   color: #6C8746;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
+
 
 body {
   background-color: #F6F5F4;

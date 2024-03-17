@@ -53,3 +53,11 @@ button {
     font-size: var(--buttonFontLinkSizeSmall);
   }
 }
+
+@media (max-width: 750px) {
+  .emptySquareButton {
+    border-top:  var(--borderLenght) solid var(--primaryColor);
+    height: 60px;
+    width: 100%;
+  }
+}

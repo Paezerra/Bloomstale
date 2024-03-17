@@ -2,39 +2,77 @@
   display: grid;
   grid-template-columns: var(--marginBorders) auto var(--marginBorders);
   box-sizing: border-box;
+  margin: 0;
   width: 100vw;
   padding: 0;
   position: relative;
   padding-bottom: 100px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .underLineDiv {
-    box-sizing: border-box;
-    height: var(--marginBorders);
-    border-bottom: var(--borderLenght) solid var(--primaryColor);
+  box-sizing: border-box;
+  height: var(--marginBorders);
+  border-bottom: var(--borderLenght) solid var(--primaryColor);
 }
 
 .upperLineDiv {
-    box-sizing: border-box;
-    height: var(--marginBorders);
-    border-top: var(--borderLenght) solid var(--primaryColor);
+  box-sizing: border-box;
+  height: var(--marginBorders);
+  border-top: var(--borderLenght) solid var(--primaryColor);
 }
 
 .button_container {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    height: var(--marginBorders) ;
-    margin: 0;
-    padding: 0;
-    border: var(--borderLenght) solid var(--primaryColor);
-    border-left: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  height: var(--marginBorders);
+  margin: 0;
+  padding: 0;
+  border: var(--borderLenght) solid var(--primaryColor);
+  border-left: 0;
 }
 
 .button_container ul {
-    display: flex;
+  display: flex;
+  box-sizing: border-box;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  .button_section {
     box-sizing: border-box;
-    padding: 0;
-    width: 100%;
-    margin: 0;
+    max-width: 100vw;
+    grid-template-columns: var(--marginBorders) auto var(--marginBorders);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      " . buttonContainer upperLineDiv"
+      " . buttonContainer ."
+      " underLineDiv buttonContainer .";
+  }
+
+  .button_container {
+    height: 180px;
+    border: 0;
+    border-right: var(--borderLenght) solid var(--primaryColor);
+    border-bottom: var(--borderLenght) solid var(--primaryColor);
+  }
+  .button_section ul {
+    height: 180px;
+    flex-direction: column;
+    gap: -1;
+  }
+  .underLineDiv {
+    grid-area: underLineDiv;
+  }
+
+  .upperLineDiv {
+    grid-area: upperLineDiv;
+  }
+
+  .button_container {
+    grid-area: buttonContainer;
+  }
 }
